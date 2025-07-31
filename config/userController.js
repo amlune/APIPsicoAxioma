@@ -57,7 +57,7 @@ export default class userController {
       }
     }
   }
-/*   static async updateUser(req, res) {
+  /*   static async updateUser(req, res) {
     let connection;
     try {
       const { userEmail, newEmail } = req.body;
