@@ -1,13 +1,17 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import dotenv from "dotenv";
 import router from "./config/routes.js";
+
+// Cargar variables de entorno
+dotenv.config();
 
 const app = express();
 
 const corsOption={
     //Conect rutes
-    origin: 'http://10.175.145.113:3000', //'localhost:3000'
+    origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
     }
